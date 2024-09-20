@@ -106,7 +106,7 @@ Endeavor is open-source software licensed under the MIT license.
 
 Endeavor is inspired by the relentless spirit of the hero Endeavor from My Hero Academia. I aim to embody that same determination in providing the best tools for developers to bring their ideas to life.
 
-Key Components that make Endeavor burn are:
+<!-- Key Components that make Endeavor burn are:
 - **Next.js**: The foundation for building fast and scalable web applications.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **Mantine**: A React component library for building beautiful and responsive interfaces.
@@ -123,7 +123,7 @@ Key Components that make Endeavor burn are:
 - **LlamaIndex**: A powerful indexing and retrieval system for AI applications.
 - **OpenAI**: An AI platform for developing and deploying AI models.
 - **Claude AI**: A powerful AI platform for natural language processing and understanding.
-- **i18n**: Internationalization support for building multilingual applications.
+- **i18n**: Internationalization support for building multilingual applications. -->
 ---
 
 Built with ❤️ and determination by Kwesi Navilot
