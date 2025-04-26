@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "append-migrations": "node scripts/append-migrations.js"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
@@ -17,7 +18,10 @@
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "next-auth": "^4.24.5",
+    "@prisma/client": "^5.14.0",
+    "prisma": "^5.14.0"
   },
   "devDependencies": {
     "postcss": "^8",
