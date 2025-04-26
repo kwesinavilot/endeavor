@@ -4,6 +4,30 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.2.0] - 2024-06-XX
+
+### Added
+- Magic link authentication support via NextAuth.js.
+- Custom email sending for authentication (supports Mailgun, Resend, Mailtrap).
+- Centralized mail config in `config/mail.js`.
+- Password reset flow: forgot password, reset password UI and API endpoints.
+- Added `password` field to Prisma User model.
+- UI pages for sign in, verify request, error, forgot password, and reset password.
+- Utility for sending emails (`src/lib/sendMail.js`).
+- Custom `sendVerificationRequest` for NextAuth email/magic link provider.
+
+### Changed
+- Updated `.env.example` with mail provider variables.
+- Updated README with new features and usage examples.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
+[0.2.0]: https://github.com/your-repo/endeavor/releases/tag/v0.2.0
+
 ## [0.1.0] - 2025-04-26
 
 ### Added
