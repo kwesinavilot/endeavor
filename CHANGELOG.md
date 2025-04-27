@@ -4,6 +4,31 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.3.0] - 2024-06-XX
+
+### Added
+- Security middleware for HTTP headers and HTTPS enforcement.
+- Standard landing page, About, and Contact Us pages using Tailwind and shadcn/ui.
+- Sticky navigation bar across all pages.
+- Responsive dashboard layout with left sidebar navigation.
+- Improved responsiveness for all main pages.
+- Example Contact Us form (UI only).
+- Example About page.
+- Dashboard with sidebar and placeholder navigation.
+- Navigation links for dashboard, about, contact, and auth flows.
+
+### Changed
+- Polished auth UI pages for consistency and responsiveness.
+- Updated layout to include sticky nav and improved structure.
+
+### Fixed
+- N/A
+
+### Removed
+- N/A
+
+[0.3.0]: https://github.com/your-repo/endeavor/releases/tag/v0.3.0
+
 ## [0.2.0] - 2024-06-XX
 
 ### Added
