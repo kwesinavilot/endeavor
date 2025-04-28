@@ -6,44 +6,49 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/sonner";
 
-export default function SignIn() {
+export default function SignUp() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirm, setConfirm] = useState("");
 
-  const handleGoogleSignIn = async () => {
+  const handleGoogleSignUp = async () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      toast.success("Signed in with Google!");
+      toast.success("Signed up with Google!");
       router.push("/dashboard");
     }, 1200);
   };
 
-  const handleEmailSignIn = async (e) => {
+  const handleEmailSignUp = async (e) => {
     e.preventDefault();
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      if (email && password) {
-        toast.success("Signed in successfully!");
-        router.push("/dashboard");
-      } else {
-        toast.error("Please enter email and password.");
+      if (!email || !password || !confirm) {
+        toast.error("Please fill all fields.");
+        return;
       }
+      if (password !== confirm) {
+        toast.error("Passwords do not match.");
+        return;
+      }
+      toast.success("Account created! Redirecting...");
+      router.push("/dashboard");
     }, 1000);
   };
 
   return (
     <form
       className="flex flex-col gap-6 w-full max-w-xs"
-      onSubmit={handleEmailSignIn}
+      onSubmit={handleEmailSignUp}
     >
       <div className="flex flex-col items-center gap-2 text-center">
-        <h1 className="text-2xl font-bold">Sign in to your account</h1>
+        <h1 className="text-2xl font-bold">Create your account</h1>
         <p className="text-balance text-sm text-muted-foreground">
-          Enter your email below to sign in to your account
+          Enter your email and password to sign up
         </p>
       </div>
       <div className="grid gap-6">
@@ -51,7 +56,7 @@ export default function SignIn() {
           type="button"
           variant="outline"
           className="w-full"
-          onClick={handleGoogleSignIn}
+          onClick={handleGoogleSignUp}
           disabled={loading}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -60,7 +65,7 @@ export default function SignIn() {
               fill="currentColor"
             />
           </svg>
-          Continue with Google
+          Sign up with Google
         </Button>
 
         <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
@@ -83,33 +88,42 @@ export default function SignIn() {
           />
         </div>
         <div className="grid gap-2">
-          <div className="flex items-center">
-            <Label htmlFor="password">Password</Label>
-            <a
-              href="/auth/reset-password"
-              className="ml-auto text-sm underline-offset-4 hover:underline"
-            >
-              Forgot your password?
-            </a>
-          </div>
+          <Label htmlFor="password">Password</Label>
           <Input
             id="password"
             type="password"
-            autoComplete="current-password"
+            autoComplete="new-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             disabled={loading}
             required
           />
         </div>
+        <div className="grid gap-2">
+          <Label htmlFor="confirm">Confirm Password</Label>
+          <Input
+            id="confirm"
+            type="password"
+            autoComplete="new-password"
+            value={confirm}
+            onChange={(e) => setConfirm(e.target.value)}
+            disabled={loading}
+            required
+          />
+        </div>
         <Button type="submit" className="w-full" disabled={loading}>
-          Sign In
+          Sign Up
         </Button>
       </div>
       <div className="text-center text-sm">
-        Don&apos;t have an account?{" "}
-        <a href="/auth/signup" className="underline underline-offset-4">
-          Sign up
+        Already have an account?{" "}
+        <a href="/auth/signin" className="underline underline-offset-4">
+          Sign in
+        </a>
+      </div>
+      <div className="text-center text-xs mt-2">
+        <a href="/auth/reset-password" className="underline underline-offset-4">
+          Forgot your password?
         </a>
       </div>
     </form>

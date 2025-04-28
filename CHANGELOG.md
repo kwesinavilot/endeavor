@@ -4,7 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.4.0] - 2025-04 - 28
+## [0.5.0] - 2025-04-28
+
+### Added
+- Added layout components for authentication pages, and integrated them into the existing authentication flow.
+- Added SEO metadata components for better search engine visibility.
+
+### Changed
+- Updated authentication flow to enhance user experience and maintain consistency across all pages.
+- Improved error handling and user feedback during authentication processes.
+
+## [0.4.0] - 2025-04-28
 
 ### Changed
 - Polished auth UI pages for consistency and responsiveness.
