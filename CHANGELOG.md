@@ -4,7 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.3.0] - 2024-06-XX
+## [0.4.0] - 2025-04 - 28
+
+### Changed
+- Polished auth UI pages for consistency and responsiveness.
+- Updated layout to include sticky nav and improved structure.
+- Sign in page now uses shadcn-inspired layout and styling, while preserving all previous authentication logic and handlers.
+
+## [0.3.0] - 2025-04-28
 
 ### Added
 - Security middleware for HTTP headers and HTTPS enforcement.
@@ -17,19 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Dashboard with sidebar and placeholder navigation.
 - Navigation links for dashboard, about, contact, and auth flows.
 
-### Changed
-- Polished auth UI pages for consistency and responsiveness.
-- Updated layout to include sticky nav and improved structure.
-
-### Fixed
-- N/A
-
-### Removed
-- N/A
-
-[0.3.0]: https://github.com/your-repo/endeavor/releases/tag/v0.3.0
-
-## [0.2.0] - 2024-06-XX
+## [0.2.0] - 2025-04-27
 
 ### Added
 - Magic link authentication support via NextAuth.js.
@@ -44,14 +39,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 - Updated `.env.example` with mail provider variables.
 - Updated README with new features and usage examples.
-
-### Fixed
-- N/A
-
-### Removed
-- N/A
-
-[0.2.0]: https://github.com/your-repo/endeavor/releases/tag/v0.2.0
 
 ## [0.1.0] - 2025-04-26
 
@@ -68,11 +55,3 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 - `.gitignore` updated to ensure `.env` files are ignored.
-
-### Removed
-- N/A
-
-### Fixed
-- N/A
-
-[0.1.0]: https://github.com/your-repo/endeavor/releases/tag/v0.1.0

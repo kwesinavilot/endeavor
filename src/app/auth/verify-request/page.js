@@ -1,4 +1,3 @@
-// filepath: c:\wamp64\www\alter\endeavor\src\app\auth\verify-request\page.js
 export default function VerifyRequest() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">

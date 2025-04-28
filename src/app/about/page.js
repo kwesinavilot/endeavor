@@ -1,4 +1,3 @@
-// filepath: c:\wamp64\www\alter\endeavor\src\app\about\page.js
 export default function About() {
   return (
     <main className="max-w-2xl mx-auto py-16 px-4">
